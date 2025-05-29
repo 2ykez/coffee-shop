@@ -1,0 +1,40 @@
+.header {
+    padding: 30px 120px 0 120px;
+    height: 260px;
+    background: url('../../img/our-coffee/headerBg-our-coffee.png');
+}
+
+.heading {
+    margin-top: 60px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+
+    &-s {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
+.flex__wrapper-coffee {
+    margin-top: 79px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 79px;
+
+    p {
+        text-align-last: left;
+    }
+
+    .text-b {
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .coffee-price {
+        font-size: 24px;
+    }
+}
