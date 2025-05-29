@@ -6,11 +6,11 @@ import './Goods-list.scss';
 import aromistico from '../../img/aromistico.jpg';
 import hotCoffee from '../../img/goods-page/cup-of-coffee.jpg';
 
-function GoodsList() {
+function GoodsList(props) {
     return (
         <>
             <header className="header">
-                <Header changePage={this.props.changePage} />
+                <Header changePage={props.changePage} />
                 <h1 className='heading'>For your pleasure</h1>
             </header>
             <div className="flex__wrapper">

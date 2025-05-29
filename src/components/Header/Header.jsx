@@ -11,10 +11,10 @@ class Header extends Component {
             <div className='titles'>
                 <div className="titles-main">
                     <img src={lightBeans} alt="" className='titles-main-beans' />
-                    <button className='main' onClick={() => this.props.changePage('main')}>Coffee house</button>
+                    <button className='main' onClick={this.props.changePage}>Coffee house</button>
                 </div>
-                <button className='our-coffee' onClick={() => this.props.changePage('our-coffee')}>Our coffee</button>
-                <button className='goods-pleasure' onClick={() => this.props.changePage('goods-pleasure')}>For your pleasure</button>
+                <button className='our-coffee' onClick={this.props.changePage}>Our coffee</button>
+                <button className='goods-pleasure' onClick={this.props.changePage}>For your pleasure</button>
             </div>
         )
     }

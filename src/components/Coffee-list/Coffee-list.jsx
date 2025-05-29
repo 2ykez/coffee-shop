@@ -6,11 +6,12 @@ import './Coffee-list.scss';
 import womanDrinking from '../../img/our-coffee/girl-drink.jpg';
 import goods from '../../img/aromistico.jpg';
 
-function CoffeeList() {
+function CoffeeList(props) {
+
     return (
         <>
             <header className='header'>
-                <Header changePage={this.props.changePage} />
+                <Header changePage={props.changePage} />
                 <h1 className='heading'>Our coffee</h1>
             </header>
             <div className="flex__wrapper">

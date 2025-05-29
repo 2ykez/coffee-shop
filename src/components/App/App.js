@@ -1,6 +1,5 @@
 import { Component } from 'react';
 
-import Main from '../Main/Main';
 import CoffeeList from '../Coffee-list/Coffee-list';
 import CoffeeItem from '../Coffee-item/Coffee-item';
 import GoodsList from '../Goods-list/Goods-list';
@@ -18,11 +17,31 @@ import aromistioc from '../../img/aromistico.jpg';
 
 
 class App extends Component {
+  state = {
+    currentPage: 'main'
+  }
+
+  changePage = (e) => {
+    if (e.target.className === 'our-coffee') {
+      this.setState({ currentPage: 'our-coffee' })
+    } else if (e.target.className === 'goods-pleasure') {
+      this.setState({ currentPage: 'goods-pleasure' })
+    } else {
+      this.setState({ currentPage: 'main' })
+    }
+
+    console.log(e.target.className);
+  }
+
   render() {
+
+    if (this.state.currentPage === 'our-coffee') return (<CoffeeList changePage={this.changePage} />)
+    if (this.state.currentPage === 'goods-pleasure') return (<GoodsList changePage={this.changePage} />)
+
     return (
       <>
         <header className="header-main">
-          <Header changePage={this.props.changePage} />
+          <Header changePage={this.changePage} />
           <h1 className="heading">Everything You Love About Coffee</h1>
           <LightDivider />
           <p className="header-text">We makes every day full of energy and taste</p>
