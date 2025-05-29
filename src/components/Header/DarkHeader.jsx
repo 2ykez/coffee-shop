@@ -7,10 +7,10 @@ function DarkHeader() {
         <div className='titles-dark'>
             <div className="titles-dark-main">
                 <img src={darkBeans} alt="" className='titles-dark-main-beans' />
-                <a href='#' className='main'>Coffee house</a>
+                <button className='main'>Coffee house</button>
             </div>
-            <a href='#' className='our-coffee'>Our coffee</a>
-            <a href='#' className='goods-pleasure'>For your pleasure</a>
+            <button className='our-coffee'>Our coffee</button>
+            <button className='goods-pleasure'>For your pleasure</button>
         </div>
     )
 }

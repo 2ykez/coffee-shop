@@ -10,7 +10,7 @@ function CoffeeList() {
     return (
         <>
             <header className='header'>
-                <Header />
+                <Header changePage={this.props.changePage} />
                 <h1 className='heading'>Our coffee</h1>
             </header>
             <div className="flex__wrapper">

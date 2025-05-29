@@ -10,7 +10,7 @@ function GoodsList() {
     return (
         <>
             <header className="header">
-                <Header />
+                <Header changePage={this.props.changePage} />
                 <h1 className='heading'>For your pleasure</h1>
             </header>
             <div className="flex__wrapper">
