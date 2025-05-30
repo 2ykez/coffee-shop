@@ -65,7 +65,7 @@ function GoodsList(props) {
                     <p className="country">Brazil</p>
                     <div className="price">6.99$</div></div>
             </div>
-            <Footer />
+            <Footer changePage={props.changePage} />
         </>
     )
 }

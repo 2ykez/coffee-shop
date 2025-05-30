@@ -3,10 +3,10 @@ import DarkHeader from "../Header/DarkHeader";
 
 import './Footer.scss'
 
-function Footer() {
+function Footer(props) {
     return (
         <footer className="footer">
-            <DarkHeader />
+            <DarkHeader changePage={props.changePage} />
             <DarkDivider />
         </footer>
     )

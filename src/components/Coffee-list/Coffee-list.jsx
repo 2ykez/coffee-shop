@@ -82,7 +82,7 @@ function CoffeeList(props) {
                         <div className="price">6.99$</div></div>
                 </div>
             </div>
-            <Footer />
+            <Footer changePage={props.changePage} />
         </>
     )
 }
