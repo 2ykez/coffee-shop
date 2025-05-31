@@ -30,7 +30,10 @@ class App extends Component {
       this.setState({ currentPage: 'main' })
     }
 
-    console.log(e.target.className);
+  }
+
+  changeOnCoffeeList = () => {
+    this.setState({ currentPage: 'our-coffee' })
   }
 
   render() {
@@ -46,7 +49,7 @@ class App extends Component {
           <LightDivider />
           <p className="header-text">We makes every day full of energy and taste</p>
           <p className="header-question">Want to try our beans?</p>
-          <button className="btn">More</button>
+          <button className="btn" onClick={this.changeOnCoffeeList}>More</button>
         </header>
         <div className="about">
           <h2 className="heading-s">About us</h2>
