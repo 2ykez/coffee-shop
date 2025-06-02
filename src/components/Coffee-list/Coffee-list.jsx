@@ -124,25 +124,25 @@ class CoffeeList extends Component {
                         </div>
                     </form>
                     <div className="grid_wrapper">
-                        {this.state.filter === 'brazil' ? this.state.beans.filter(item => item.country === 'Brazil').map(item => (<div className="coffee-beans__item" onClick={() => { this.OpenCoffeeItem(); this.handleSelect(item); }}>
+                        {this.state.filter === 'brazil' ? this.state.beans.filter(item => item.country === 'Brazil').map(item => (<div className="coffee-beans__item" id={item.id} onClick={() => { this.OpenCoffeeItem(); this.handleSelect(item); }}>
                             <img src={goods} alt="" className="best-item-img" />
                             <p className="desc">{item.nameBeans}</p>
                             <p className="country">{item.country}</p>
                             <div className="price">{item.price}$</div>
                         </div>)) : null}
-                        {this.state.filter === 'kenya' ? this.state.beans.filter(item => item.country === 'Kenya').map(item => (<div className="coffee-beans__item" onClick={() => { this.OpenCoffeeItem(); this.handleSelect(item); }}>
+                        {this.state.filter === 'kenya' ? this.state.beans.filter(item => item.country === 'Kenya').map(item => (<div className="coffee-beans__item" id={item.id} onClick={() => { this.OpenCoffeeItem(); this.handleSelect(item); }}>
                             <img src={goods} alt="" className="best-item-img" />
                             <p className="desc">{item.nameBeans}</p>
                             <p className="country">{item.country}</p>
                             <div className="price">{item.price}$</div>
                         </div>)) : null}
-                        {this.state.filter === 'columbia' ? this.state.beans.filter(item => item.country === 'Columbia').map(item => (<div className="coffee-beans__item" onClick={() => { this.OpenCoffeeItem(); this.handleSelect(item); }}>
+                        {this.state.filter === 'columbia' ? this.state.beans.filter(item => item.country === 'Columbia').map(item => (<div className="coffee-beans__item" id={item.id} onClick={() => { this.OpenCoffeeItem(); this.handleSelect(item); }}>
                             <img src={goods} alt="" className="best-item-img" />
                             <p className="desc">{item.nameBeans}</p>
                             <p className="country">{item.country}</p>
                             <div className="price">{item.price}$</div>
                         </div>)) : null}
-                        {this.state.filter === 'all' ? this.state.beans.map(item => (<div className="coffee-beans__item" onClick={() => { this.OpenCoffeeItem(); this.handleSelect(item); }}>
+                        {this.state.filter === 'all' ? this.state.beans.map(item => (<div className="coffee-beans__item" id={item.id} onClick={() => { this.OpenCoffeeItem(); this.handleSelect(item); }}>
                             <img src={goods} alt="" className="best-item-img" />
                             <p className="desc">{item.nameBeans}</p>
                             <p className="country">{item.country}</p>
