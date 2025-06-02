@@ -43,8 +43,20 @@ class CoffeeList extends Component {
                     country: 'Brazil',
                     price: 6.99
                 }
-            ]
+            ],
+            filter: 'all'
         }
+    }
+
+    filterBtn = (country) => {
+        this.setState({
+            filter: country
+        })
+
+    }
+
+    onSubmit = (e) => {
+        e.preventDefault();
     }
 
     render() {
@@ -75,7 +87,7 @@ class CoffeeList extends Component {
                 <div className="divider"></div>
 
                 <div className="filter">
-                    <form action="" className='form'>
+                    <form action="" className='form' onSubmit={this.onSubmit}>
                         <div className="filter-typing">
                             <label htmlFor="search-beans" className='label-typing'>Looking for</label>
                             <input type="text" placeholder='start typing here...' id='search-beans' />
@@ -83,21 +95,38 @@ class CoffeeList extends Component {
                         <div className="filter-btns">
                             <label htmlFor="" className='label-btns'>Or filter</label>
                             <div className="btns">
-                                <button className='filter-btn'>Brazil</button>
-                                <button className='filter-btn'>Kenya</button>
-                                <button className='filter-btn'>Columbia</button>
+                                <button className='filter-btn' onClick={() => this.filterBtn('brazil')} id='brazil'>Brazil</button>
+                                <button className='filter-btn' onClick={() => this.filterBtn('kenya')} id='kenya'>Kenya</button>
+                                <button className='filter-btn' onClick={() => this.filterBtn('columbia')} id='columbia'>Columbia</button>
                             </div>
                         </div>
                     </form>
                     <div className="grid_wrapper">
-                        {this.state.beans.map(item => (
-                            <div className="coffee-beans__item">
-                                <img src={goods} alt="" className="best-item-img" />
-                                <p className="desc">{item.nameBeans}</p>
-                                <p className="country">{item.country}</p>
-                                <div className="price">{item.price}$</div>
-                            </div>
-                        ))}
+                        {this.state.filter === 'brazil' ? this.state.beans.filter(item => item.country === 'Brazil').map(item => (<div className="coffee-beans__item">
+                            <img src={goods} alt="" className="best-item-img" />
+                            <p className="desc">{item.nameBeans}</p>
+                            <p className="country">{item.country}</p>
+                            <div className="price">{item.price}$</div>
+                        </div>)) : null}
+                        {this.state.filter === 'kenya' ? this.state.beans.filter(item => item.country === 'Kenya').map(item => (<div className="coffee-beans__item">
+                            <img src={goods} alt="" className="best-item-img" />
+                            <p className="desc">{item.nameBeans}</p>
+                            <p className="country">{item.country}</p>
+                            <div className="price">{item.price}$</div>
+                        </div>)) : null}
+                        {this.state.filter === 'columbia' ? this.state.beans.filter(item => item.country === 'Columbia').map(item => (<div className="coffee-beans__item">
+                            <img src={goods} alt="" className="best-item-img" />
+                            <p className="desc">{item.nameBeans}</p>
+                            <p className="country">{item.country}</p>
+                            <div className="price">{item.price}$</div>
+                        </div>)) : null}
+                        {this.state.filter === 'all' ? this.state.beans.map(item => (<div className="coffee-beans__item">
+                            <img src={goods} alt="" className="best-item-img" />
+                            <p className="desc">{item.nameBeans}</p>
+                            <p className="country">{item.country}</p>
+                            <div className="price">{item.price}$</div>
+                        </div>)) : null}
+
                     </div>
                 </div>
                 <Footer changePage={this.props.changePage} />
