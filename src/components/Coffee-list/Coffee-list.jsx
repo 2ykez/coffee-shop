@@ -18,7 +18,7 @@ class CoffeeList extends Component {
                     id: 0,
                     nameBeans: 'Solimo Coffee Beans 2 kg',
                     country: 'Brazil',
-                    price: 6.99
+                    price: 7.53
                 },
                 {
                     id: 1,
@@ -30,25 +30,25 @@ class CoffeeList extends Component {
                     id: 2,
                     nameBeans: 'Solimo Coffee Beans 2 kg',
                     country: 'Columbia',
-                    price: 6.99
+                    price: 18.99
                 },
                 {
                     id: 3,
                     nameBeans: 'Solimo Coffee Beans 2 kg',
                     country: 'Brazil',
-                    price: 6.99
+                    price: 10.29
                 },
                 {
                     id: 4,
                     nameBeans: 'Solimo Coffee Beans 2 kg',
                     country: 'Brazil',
-                    price: 6.99
+                    price: 8.35
                 },
                 {
                     id: 5,
                     nameBeans: 'Solimo Coffee Beans 2 kg',
                     country: 'Brazil',
-                    price: 6.99
+                    price: 12.49
                 }
             ],
             filter: 'all',
